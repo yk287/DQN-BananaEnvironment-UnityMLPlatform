@@ -32,6 +32,6 @@ pip install unityagents
 
 ## Training
 
-To train the agent that learns how to solve the environment, simply run './main.py'. This will start the training process with the default hyperparameters given to the model. When the environment is solved, the script saves the model parameters and also outputs a couple of graphs that shows the rewards per episode, and the average rewards last 100 episodes.
+To train the agent that learns how to solve the environment, simply run **main.py**. This will start the training process with the default hyperparameters given to the model. When the environment is solved, the script saves the model parameters and also outputs a couple of graphs that shows the rewards per episode, and the average rewards last 100 episodes.
 
 Weights for the model that successfully achived an average score of 13+ over 100 episodes are included as **succesful_model.pth**
