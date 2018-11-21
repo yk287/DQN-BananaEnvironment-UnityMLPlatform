@@ -2,29 +2,9 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
-class NormalizedActions(gym.ActionWrapper):
-    def _action(self, action):
-        low = self.action_space.low
-        high = self.action_space.high
-
-        action = low + (action + 1.0) * 0.5 * (high - low)
-        action = np.clip(action, low, high)
-
-        return action
-
-    def _reverse_action(self, action):
-        low = self.action_space.low
-        high = self.action_space.high
-
-        action = 2 * (action - low) / (high - low) - 1
-        action = np.clip(action, low, high)
-
-        return action
-
-
 def plotter(env_name, num_episodes, rewards_list, ylim):
     '''
-
+    used to plot avg scores.
     :param env_name:
     :param num_episodes:
     :param rewards_list:
@@ -43,7 +23,7 @@ def plotter(env_name, num_episodes, rewards_list, ylim):
 
 def raw_score_plotter(scores):
     '''
-
+    used to plot raw scores
     :param scores:
     :return:
     '''
